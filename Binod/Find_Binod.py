@@ -2,10 +2,10 @@ import os
 dir_contents= os.listdir()
 # print(dir_contents)
 nBinod = 0
-def isBinod(filename):
+def isNameBinod(filename):
     with open(filename, 'r') as f:
         filecontent = f.read()
-    if 'binod' in filecontent.lower():
+    if 'binod' or 'Binod' or 'BINOD' in filecontent:
         return True
         n+=1
     else:
@@ -19,7 +19,7 @@ for item in dir_contents :
         if flag:
             print(f'Binod found in {item}')
             nBinod += 1
-        else :
+        else:
             print(f'Binod is not found in {item}')
         
 print("\n****Find Binod Summary****")
